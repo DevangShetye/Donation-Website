@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: white;
+}
+
+.container {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* Navigation Bar  */
+
+.navigation {
+    width: 100%;
+    background-color: rgb(73, 163, 73);
+    overflow: auto;
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+.navigation a {
+    float: left;
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    width: 33.33%;
+    /* three links of equal widths */
+    text-align: center;
+}
+
+.navigation a:hover {
+    background-color: white;
+    color: rgb(73, 163, 73);
+}
+
+@media screen and (max-width: 500px) {
+    .navigation a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Navigation Bar Ends */
+
+
+/* Image slider */
+
+.cont {
+    overflow: hidden;
+    height: 80%;
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+.imgs {
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    position: relative;
+    width: 500%;
+}
+
+img {
+    float: left;
+    width: 20%;
+    height: 700px;
+    padding: 40px;
+}
+
+
+/* Image slider ends*/
+
+
+/* About*/
+
+.column {
+    float: left;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 16px;
+    padding: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    margin-top: -150px;
+    border: 4px 4px solid #fff;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+.about-section {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-size: 23px;
+}
+
+.container {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    text-align: justify;
+    padding: 30px 30px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+}
+
+.title {
+    color: grey;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+/*  AboutEnds */
+
+
+/* Donatiion */
+
+.donate {
+    min-height: 10vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    padding: 3rem 2rem;
+}
+
+.donate .DonateButton {
+    padding: 4rem 8rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.267);
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .2rem;
+    margin-top: 75px;
+    margin-right: 145px;
+    color: white;
+    transition: .3s ease;
+    background-color: rgb(73, 163, 73);
+}
+
+.donate .DonateButton:hover {
+    background-color: rgb(161, 161, 161);
+    color: white;
+}
+
+.donation {
+    width: 100%;
+    text-align: center;
+    margin-top: 600px;
+    margin-left: 150px;
+}
+
+.donation .DonateButton {
+    margin-top: 60px;
+    margin-bottom: 120px;
+    padding: 4rem 8rem;
+    display: inline-block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(73, 163, 73);
+}
+
+.DonateButton:hover {
+    color: #625195;
+    background-color: rgb(161, 161, 161);
+}
+
+.footer {
+    min-height: 20vh;
+    width: 100%;
+    background-color: rgb(73, 163, 73);
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+}
+
+
+/* Donatiion ends */
+
+.footer .FooterContact {
+    padding: 20px;
+}
+
+.footer .FooterContact .FooterContactHeading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.footer .FooterContact .FooterContactInfo {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 650px) {
+    .nav-bar {
+        width: 80%;
+    }
+    .nav-bar .nav-list ul {
+        transform: translateX(0);
+        position: initial;
+        padding: 0;
+        z-index: initial;
+        background-color: transparent;
+    }
+    .nav-bar .nav-list ul li {
+        display: inline-block;
+    }
+    .donation {
+        max-width: 30%;
+        text-align: left;
+    }
+}
+
+.about {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.about p {
+    width: 55%;
+    text-align: left;
+    padding-right: 17rem;
+}

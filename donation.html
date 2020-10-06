@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DONATION</title>
+    <link rel="stylesheet" type="text/css" href="./donation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- rendering on mobile devices. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+
+<body>
+    <div class="Backspace">
+        <span onclick="parent.location='./index.html'" class="close" title="Back To Site">&times;</span>
+        <form class="BackspaceContent" action="/action_page.php">
+            <div class="container">
+                <h1>DONATION</h1>
+                <p><b>We Need Our Farmers and So Do They
+                    </b>
+                </p>
+                <hr>
+                <div class="paymentbtn">
+                    <div id="paypal-button-container"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=Ab9UPo7OrfC-fPnUm9-ObwNckVsH7AtCPigNeTe-w8HyB4UcQJhnzUc1roDk8n-WJ7WJRkF8gzIi0ZtB">
+        // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+    </script>
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // This function sets up the details of the transaction, including the amount and line item details.
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '14'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                // This function captures the funds from the transaction.
+                return actions.order.capture().then(function(details) {
+                    // This function shows a transaction success message to your buyer.
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                });
+            }
+        }).render('#paypal-button-container');
+        //This function displays Smart Payment Buttons on your web page.
+    </script>
+</body>
+
+</html>
