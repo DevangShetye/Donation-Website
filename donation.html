@@ -3,23 +3,26 @@
 
 <head>
     <title>DONATION</title>
-    <link rel="stylesheet" type="text/css" href="./donation.css">
+    <link rel="stylesheet" type="text/css" href="donation.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- rendering on mobile devices. -->
+    <!-- Ensures optimal rendering on mobile devices. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 </head>
 
 <body>
-    <div class="Backspace">
-        <span onclick="parent.location='./index.html'" class="close" title="Back To Site">&times;</span>
-        <form class="BackspaceContent" action="/action_page.php">
+    <div class="Box">
+
+
+        <form class="BoxContent">
             <div class="container">
                 <h1>DONATION</h1>
-                <p><b>We Need Our Farmers and So Do They
-                    </b>
-                </p>
+                <p><b>We Need Our Farmers and So Do They</b></p>
+
                 <hr>
+
+
+
                 <div class="paymentbtn">
                     <div id="paypal-button-container"></div>
                 </div>
@@ -36,7 +39,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '14'
+                            value: '14.00'
                         }
                     }]
                 });
